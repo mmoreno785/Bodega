@@ -172,11 +172,12 @@ $(".tablaProductos tbody").on("click", "button.btnAjustarProducto", function(){
 	var codigoAjusteProducto =$(this).attr("codigoAjusteProducto");
 	$("#ajustarCodigo").val(codigoAjusteProducto);
 
-	var unidadesPorPaquete=$(this).attr("unidadesPorPaquete");
+	//var unidadesPorPaquete=$(this).attr("unidadesPorPaquete");
 	var stock=$(this).attr("stock");
+	$("#ajusteCantidad").val(stock);
 	$("#ajusteSaldoCantidad").val(stock);
 	$("#ajusteStock").val(stock);
-	$("#ajusteUnidadesPorPaquete").val(unidadesPorPaquete);
+	//$("#ajusteUnidadesPorPaquete").val(unidadesPorPaquete);
 
 	var precioCompra=$(this).attr("precioCompra");
 	$("#ajusteValorUnitario").val(precioCompra);
@@ -185,24 +186,19 @@ $(".tablaProductos tbody").on("click", "button.btnAjustarProducto", function(){
 
 
 
-	//alert(stock);
+	 //alert(precioCompra);
 
 })
 /*=============================================
-CALCULO DE CANTIDAD, VALOR Y SALDO TOTAL AL AJUSTAR PRODUCTO
+CALCULO DE VALOR Y SALDO TOTAL AL AJUSTAR PRODUCTO
 =============================================*/
-$("#ajusteCantidadPaquetes, #ajusteCantidadUnidades, #ajusteValorUnitario").change(function(){
-	var unidadesPorPaquete = $("#ajusteUnidadesPorPaquete").val();
-	//alert(unidadesPorPaquete);
-	var cantidadPaquetes = $("#ajusteCantidadPaquetes").val();
-	//alert (cantidadPaquetes);
-	var cantidadUnidades = $("#ajusteCantidadUnidades").val();
+$("#ajusteCantidad, #ajusteValorUnitario").change(function(){
+	
+	var cantidad = $("#ajusteCantidad").val();
 	//alert (cantidadUnidades);
-	var cantidadTotal=(Number(unidadesPorPaquete)*Number(cantidadPaquetes))+Number(cantidadUnidades);
-	$("#ajusteCantidadTotal").val(cantidadTotal);
 	var valorUnitario =$("#ajusteValorUnitario").val();
 	//alert (valorUnitario);
-	var valorTotal=(Number(valorUnitario)/Number(unidadesPorPaquete))*Number(cantidadTotal);
+	var valorTotal=(Number(valorUnitario)*Number(cantidad));
 	//lert(valorTotal);
 	$("#ajusteValorTotal").val(valorTotal);
 	//saldo cantidad total
@@ -211,15 +207,15 @@ $("#ajusteCantidadPaquetes, #ajusteCantidadUnidades, #ajusteValorUnitario").chan
 	var operacion = $("#ajusteOperacion").val();
 	if(operacion!=0){
 		//es salida
-		var saldoCantidad=Number(stock)-Number(cantidadTotal);
+		var saldoCantidad=Number(stock)-Number(cantidad);
 	}else{
 		//es entrada
-		var saldoCantidad=Number(stock)+Number(cantidadTotal);
+		var saldoCantidad=Number(stock)+Number(cantidad);
 	}
 	
 	$("#ajusteSaldoCantidad").val(saldoCantidad);
 	//Saldo Valor total
-	var saldoValorTotal = (Number(saldoCantidad)/Number(unidadesPorPaquete))*Number(valorUnitario);
+	var saldoValorTotal = (Number(saldoCantidad)*Number(valorUnitario));
 	$("#saldoValorTotal").val(saldoValorTotal)
 
 

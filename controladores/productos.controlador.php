@@ -378,7 +378,7 @@ class ControladorProductos
 					"fecha" => $_POST["fechaAjuste"],
 					"concepto" => $_POST["conceptoAjuste"],
 					"tipo" => $_POST["ajusteOperacion"],
-					"cantidad" => $_POST["ajusteCantidadTotal"],
+					"cantidad" => $_POST["ajusteCantidad"],
 					"valor_unitario" => $_POST["ajusteValorUnitario"],
 					"valor_total" => $_POST["ajusteValorTotal"],
 					"saldo_cantidad" => $_POST["ajusteSaldoCantidad"],

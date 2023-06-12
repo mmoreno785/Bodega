@@ -73,7 +73,7 @@ MODAL AGREGAR PRODUCTO
             <div class="form-group  row">
               <div class="col-xs-6">
                 <label for="nuevaCategoria">Categoría:</label>
-                <div class="input-group">
+                <div class="input-group input-group-sm mb-3">
                   <span class="input-group-addon"><i class="fa fa-th"></i></span>
                   <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
                     <option value="">Selecionar categoría</option>
@@ -91,7 +91,7 @@ MODAL AGREGAR PRODUCTO
               <!-- ENTRADA PARA EL CÓDIGO -->
               <div class="col-xs-6">
                 <label for="nuevoCodigo">Código:</label>
-                <div class="input-group">
+                <div class="input-group input-group-sm mb-3">
                   <span class="input-group-addon"><i class="fa fa-code"></i></span>
                   <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" required>
                 </div>
@@ -100,7 +100,7 @@ MODAL AGREGAR PRODUCTO
             <!-- ENTRADA PARA LA DESCRIPCIÓN -->
             <div class="form-group">
               <label for="nuevaDescripcion">Descripción:</label>
-              <div class="input-group">
+              <div class="input-group input-group-sm mb-3">
                 <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span>
                 <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripción" required>
               </div>
@@ -110,7 +110,7 @@ MODAL AGREGAR PRODUCTO
             <div class="form-group">
 
               <label for="nuevaUnidad">Unidad de Medida:</label>
-              <div class="input-group">
+              <div class="input-group input-group-sm mb-3">
                 <span class="input-group-addon"><i class="fa fa-th"></i></span>
                 <select class="form-control input-lg" id="nuevaUnidad" name="nuevaUnidad" required>
                   <option value="">Selecionar unidad de medida</option>
@@ -129,7 +129,7 @@ MODAL AGREGAR PRODUCTO
 
             <div class="form-group">
               <label for="nuevoStock">Stock :</label>
-              <div class="input-group">
+              <div class="input-group input-group-sm mb-3">
                 <span class="input-group-addon"><i class="fa fa-check"></i></span>
                 <input type="number" class="form-control input-lg" id="nuevoStock" name="nuevoStock" min="0" placeholder="Stock" required>
               </div>
@@ -139,7 +139,7 @@ MODAL AGREGAR PRODUCTO
             <div class="form-group row">
               <div class="col-xs-6">
                 <label for="nuevoPrecioCompra">Precio de Compra:</label>
-                <div class="input-group">
+                <div class="input-group input-group-sm mb-3">
                   <span class="input-group-addon"><i class="fa fa-arrow-up"></i></span>
                   <input type="number" class="form-control input-lg" id="nuevoPrecioCompra" name="nuevoPrecioCompra" step="any" min="0" placeholder="Precio de compra" required>
                 </div>
@@ -149,7 +149,7 @@ MODAL AGREGAR PRODUCTO
 
               <div class="col-xs-6">
                 <label for="nuevoPrecioVenta">Precio de Venta:</label>
-                <div class="input-group">
+                <div class="input-group input-group-sm mb-3">
                   <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span>
                   <input type="number" class="form-control input-lg" id="nuevoPrecioVenta" name="nuevoPrecioVenta" step="any" min="0" placeholder="Precio de venta" required>
                 </div>
@@ -160,46 +160,28 @@ MODAL AGREGAR PRODUCTO
             <!-- ENTRADA PARA SUBIR FOTO -->
 
             <div class="form-group">
-
               <div class="panel">SUBIR IMAGEN</div>
-
               <input type="file" class="nuevaImagen" name="nuevaImagen">
-
               <p class="help-block">Peso máximo de la imagen 2MB</p>
-
               <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
-
             </div>
-
           </div>
-
         </div>
 
         <!--=====================================
         PIE DEL MODAL
         ======================================-->
-
         <div class="modal-footer">
-
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
-
           <button type="submit" class="btn btn-primary">Guardar producto</button>
-
         </div>
-
       </form>
-
       <?php
-
       $crearProducto = new ControladorProductos();
       $crearProducto->ctrCrearProducto();
-
       ?>
-
     </div>
-
   </div>
-
 </div>
 
 <!--=====================================
@@ -212,228 +194,108 @@ MODAL AJUSTAR PRODUCTO
         <!--=====================================
         CABEZA DEL MODAL AJUSTAR PRODUCTO
         ======================================-->
-
         <div class="modal-header" style="background:#3c8dbc; color:white">
-
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-
           <h4 class="modal-title">Ajustar Stock producto</h4>
-
         </div>
         <!--=====================================
         CUERPO DEL MODAL AJUSTAR PRODUCTO
         ======================================-->
-
         <div class="modal-body">
           <div class="box-body">
             <!--=========================================
                 ENTRADA PARA EL CÓDIGO
                 ========================================-->
-
             <div class="form-group">
-
-
               <div class="input-group">
-
-
                 <span class="input-group-addon"><i class="fa fa-code"></i> Código: </span>
-
                 <input type="text" class="form-control input-lg" id="ajustarCodigo" name="ajustarCodigo" readonly required>
                 <input type="hidden" id="ajustarId" name="ajustarId">
-
               </div>
-
             </div>
             <!--=========================================
                 ENTRADA PARA FECHA
                 ========================================-->
             <div class="form-group">
-
-
-
               <div class="input-group">
-
-
-
                 <span class="input-group-addon"><i class="fa fa-calendar-o"></i> Fecha:</span>
                 <?php
                 date_default_timezone_set('America/Guayaquil');
-
                 ?>
                 <input size="16" type="text" class="form-control" id="fechaAjuste" name="fechaAjuste" value='<?php echo date(" Y-m-d "); ?>' required>
-
               </div>
-
             </div>
-
             <!--=========================================
                 ENTRADA PARA OPERACION
                 ========================================-->
             <div class="form-group">
-
-
-
               <div class="input-group">
-
                 <span class="input-group-addon"><i class="fa fa-book"></i> Operación: </span>
-
                 <select class="form-control input-lg" id="ajusteOperacion" name="ajusteOperacion" required>
                   <option value="0">Entrada</option>
                   <option value="1">Salida</option>
                 </select>
-
-
               </div>
-
             </div>
-
             <!--=========================================
                 ENTRADA PARA CONCEPTO
                 ========================================-->
             <div class="form-group">
-
-
-
               <div class="input-group">
-
-
-
                 <span class="input-group-addon"><i class="fa fa-cc"></i> Concepto: </span>
-
                 <input size="16" type="text" class="form-control" id="conceptoAjuste" name="conceptoAjuste" required>
-
               </div>
-
             </div>
 
-            <!-- ENTRADA PARA CANTIDAD PAQUETES-->
 
+            <!-- ENTRADA PARA CANTIDAD -->
             <div class="form-group row">
-
               <div class="col-xs-4">
-                <label for="ajusteCantidadPaquetes">Cantidad Paquetes:</label>
+                <label for="ajusteCantidad">Cantidad:</label>
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-check"></i></span>
-                  <input type="number" class="form-control input-lg" id="ajusteCantidadPaquetes" name="ajusteCantidadPaquetes" min="0" placeholder="Paquetes" value="0" required>
-                </div>
-              </div>
-
-
-
-              <!-- ENTRADA PARA CANTIDAD UNIDADES-->
-
-              <div class="col-xs-4">
-
-                <label for="ajusteCantidadUnidades">Cantidad Unidades:</label>
-
-                <div class="input-group">
-
-                  <span class="input-group-addon"><i class="fa fa-check"></i></span>
-
-                  <input type="number" class="form-control input-lg" id="ajusteCantidadUnidades" name="ajusteCantidadUnidades" min="0" placeholder="Unidades" value="0" required>
-
-                </div>
-
-
-
-              </div>
-
-
-              <!-- ENTRADA PARA CANTIDAD TOTAL-->
-
-              <div class="col-xs-4">
-
-                <label for="ajusteCantidadTotal">Cantidad Total:</label>
-
-                <div class="input-group">
-
-                  <span class="input-group-addon"><i class="fa fa-check"></i></span>
-
-                  <input type="number" class="form-control input-lg" id="ajusteCantidadTotal" name="ajusteCantidadTotal" min="0" readonly required>
+                  <input type="number" class="form-control input-lg" id="ajusteCantidad" name="ajusteCantidad" min="0" required>
                   <input type="hidden" name="ajusteStock" id="ajusteStock">
-                  <input type="hidden" name="ajusteUnidadesPorPaquete" id="ajusteUnidadesPorPaquete">
-
                 </div>
-
               </div>
-            </div>
 
-            <!-- ENTRADA PARA VALOR UNITARIO -->
+              <!-- ENTRADA PARA VALOR UNITARIO -->
 
-            <div class="form-group row">
-
-              <div class="col-xs-6">
-
-                <label for="valorUnitario">Valor Unitario (Paquete):</label>
-
+              <div class="col-xs-4">
+                <label for="valorUnitario">Valor Unitario:</label>
                 <div class="input-group">
-
                   <span class="input-group-addon"><i class="fa fa-usd"></i></span>
-
                   <input type="number" class="form-control input-lg" id="ajusteValorUnitario" name="ajusteValorUnitario" step="any" min="0" placeholder="Valor Unitario" required>
-
                 </div>
-
               </div>
-
               <!-- ENTRADA PARA VALOR TOTAL -->
-
-              <div class="col-xs-6">
-
+              <div class="col-xs-4">
                 <label for="valorTotal">Valor Total:</label>
-
                 <div class="input-group">
-
                   <span class="input-group-addon"><i class="fa fa-usd"></i></span>
-
                   <input type="number" class="form-control input-lg" id="ajusteValorTotal" name="ajusteValorTotal" step="any" min="0" placeholder="Valor Total" readonly required>
-
                 </div>
-
                 <br>
-
-
-
               </div>
-
             </div>
 
             <!-- ENTRADA PARA SALDO CANTIDAD -->
-
-
-
             <div class="form-group row">
               <div class="col-xs-4">
-
                 <label for="ajusteSaldoCantidad">Saldo Cantidad:</label>
-
                 <div class="input-group">
-
                   <span class="input-group-addon"><i class="fa fa-check"></i></span>
-
-                  <input type="number" class="form-control input-lg" id="ajusteSaldoCantidad" name="ajusteSaldoCantidad" min="0" placeholder="Saldo" required>
-
+                  <input type="number" class="form-control input-lg" id="ajusteSaldoCantidad" name="ajusteSaldoCantidad" min="0" placeholder="Saldo" readonly required>
                 </div>
               </div>
 
-
-
               <!-- ENTRADA PARA SALDO VALOR UNITARIO-->
-
               <div class="col-xs-4">
-
                 <label for="ajusteSaldoValorUnitario">Saldo Valor Unitario:</label>
-
                 <div class="input-group">
-
                   <span class="input-group-addon"><i class="fa fa-check"></i></span>
-
-                  <input type="number" class="form-control input-lg" id="ajusteSaldoValorUnitario" name="ajusteSaldoValorUnitario" step="any" min="0" placeholder="Saldo" required>
-
+                  <input type="number" class="form-control input-lg" id="ajusteSaldoValorUnitario" name="ajusteSaldoValorUnitario" step="any" min="0" placeholder="Saldo" readonly required>
                 </div>
-
-
-
               </div>
 
 

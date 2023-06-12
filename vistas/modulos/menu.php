@@ -46,19 +46,7 @@
 			</li>';
 			}
 
-			if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor") {
-
-				echo '<li>
-
-				<a href="clientes">
-
-					<i class="fa fa-users"></i>
-					<span>Clientes</span>
-
-				</a>
-
-			</li>';
-			}
+			
 
 
 			/*************************************************************
@@ -66,73 +54,14 @@
 			 *************************************************************/
 
 
-			if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor") {
+			
 
-				echo '<li class="treeview">
-
-				<a href="#">
-
-					<i class="fa fa-truck"></i>
-					
-					<span>Vehículos</span>
-					
-					<span class="pull-right-container">
-					
-						<i class="fa fa-angle-left pull-right"></i>
-
-					</span>
-
-				</a>
-
-				<ul class="treeview-menu">
-					
-					<li>
-
-						<a href="vehiculos">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Administrar vehiculos</span>
-
-						</a>
-
-					</li>
-
-					<li>
-
-						<a href="cargar-vehiculo">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Cargar Vehículo</span>
-
-						</a>
-
-					</li>';
-
-				if ($_SESSION["perfil"] == "Administrador") {
-
-					echo '<li>
-
-						<a href="descargar-vehiculo">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Descargar Vehículo</span>
-
-						</a>
-
-					</li>';
-				}
-
-
-
-				echo '</ul>
-
-			</li>';
-			}
+				
 
 
 
 			/*************************************************************
-			 **********************Compras******************************
+			 **********************Solicitud******************************
 			 *************************************************************/
 
 			if ($_SESSION["perfil"] == "Administrador") {
@@ -142,7 +71,7 @@
 
 					<i class="fa fa-list-ul"></i>
 					
-					<span>Ventas</span>
+					<span>Sol. de materiales</span>
 					
 					<span class="pull-right-container">
 					
@@ -159,7 +88,7 @@
 						<a href="ventas">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Administrar ventas</span>
+							<span>Administrar solicitudes</span>
 
 						</a>
 
@@ -170,7 +99,7 @@
 						<a href="crear-venta">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Crear venta</span>
+							<span>Crear Solicitud</span>
 
 						</a>
 
@@ -183,7 +112,7 @@
 						<a href="reportes">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Reporte de ventas</span>
+							<span>Reportes</span>
 
 						</a>
 
@@ -314,7 +243,7 @@
 
 					echo '<li>
 
-						<a href="reportes-kardez">
+						<a href="reportes-kardex">
 							
 							<i class="fa fa-circle-o"></i>
 							<span>Reporte de kardex</span>

@@ -55,16 +55,16 @@ class TablaProductos{
   			if($productos[$i]["stock"] <= 10){
 
   				//$stock = "<button class='btn btn-danger' >".$productos[$i]["stock"]." (".$stockPaquetes." paq. ".$stockUnidades." uni.)</button>";
-  				$stock = "<button class='btn btn-danger btnAjustarProducto' data-toggle='modal' data-target='#modalAjustarProducto' stock=".$productos[$i]['stock']." unidadesPorPaquete=".$productos[$i]['unidades']." precioCompra=".$productos[$i]['precio_compra']." precioVenta=".$productos[$i]['precio_venta']." codigoAjusteProducto=".$productos[$i]['codigo']." idAjusteProducto=".$productos[$i]['id'].">".$productos[$i]['stock']."</button>";
+  				$stock = "<button class='btn btn-danger btnAjustarProducto' data-toggle='modal' data-target='#modalAjustarProducto' stock=".$productos[$i]['stock']." precioCompra=".$productos[$i]['precio_compra']." precioVenta=".$productos[$i]['precio_venta']." codigoAjusteProducto=".$productos[$i]['codigo']." idAjusteProducto=".$productos[$i]['id'].">".$productos[$i]['stock']."</button>";
 
   			}else if($productos[$i]["stock"] > 11 && $productos[$i]["stock"] <= 15){
 
-  				$stock = "<button class='btn btn-warning btnAjustarProducto' data-toggle='modal' data-target='#modalAjustarProducto' stock=".$productos[$i]['stock']." unidadesPorPaquete=".$productos[$i]['unidades']." precioCompra=".$productos[$i]['precio_compra']." precioVenta=".$productos[$i]['precio_venta']." codigoAjusteProducto=".$productos[$i]['codigo']." idAjusteProducto=".$productos[$i]['id'].">".$productos[$i]['stock']."</button>";
+  				$stock = "<button class='btn btn-warning btnAjustarProducto' data-toggle='modal' data-target='#modalAjustarProducto' stock=".$productos[$i]['stock']." precioCompra=".$productos[$i]['precio_compra']." precioVenta=".$productos[$i]['precio_venta']." codigoAjusteProducto=".$productos[$i]['codigo']." idAjusteProducto=".$productos[$i]['id'].">".$productos[$i]['stock']."</button>";
 
   			}else{
 
   				//$stock = "<button class='btn btn-success'>".$productos[$i]["stock"]." (".$stockPaquetes." paq. ".$stockUnidades." uni.)</button>";
-  				$stock = "<button class='btn btn-success btnAjustarProducto' data-toggle='modal' data-target='#modalAjustarProducto' stock=".$productos[$i]['stock']." unidadesPorPaquete=".$productos[$i]['unidades']." precioCompra=".$productos[$i]['precio_compra']." precioVenta=".$productos[$i]['precio_venta']." codigoAjusteProducto=".$productos[$i]['codigo']." idAjusteProducto=".$productos[$i]['id'].">".$productos[$i]['stock']."</button>";
+  				$stock = "<button class='btn btn-success btnAjustarProducto' data-toggle='modal' data-target='#modalAjustarProducto' stock=".$productos[$i]['stock']." precioCompra=".$productos[$i]['precio_compra']." precioVenta=".$productos[$i]['precio_venta']." codigoAjusteProducto=".$productos[$i]['codigo']." idAjusteProducto=".$productos[$i]['id'].">".$productos[$i]['stock']."</button>";
 
   			}
 
